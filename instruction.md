@@ -62,7 +62,7 @@ Within `<body>...</body>`, add the code as follows:
 
 You can now preview the web page by selecting "Preview" -> "Live Preview File (index.html)". You may use the [A-Frame Inspector](https://aframe.io/docs/0.5.0/guides/using-the-aframe-inspector.html) (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>i</kbd>) to navigate and play with different settings.
 
-### 2.4 Import the interior model
+### 2.4 Convert the interior model
 
 First of all, convert the .obj file exported from Sweet Home 3D to another format (.dae), because A-Frame does not fully support the .obj file exported by Sweet Home 3D. To do so, use a command line program, [assimp](http://www.assimp.org/).
 
@@ -70,7 +70,7 @@ First of all, convert the .obj file exported from Sweet Home 3D to another forma
 
 Download our precompiled .exe file at [assimp_3.3.1+d402825_win32.zip](https://github.com/TCLResearchHK/VRWorkshopCityU/raw/master/assimp_3.3.1%2Bd402825_win32.zip), extract it next to the .obj file. Open a command prompt window by entering `cmd` in the file explorer location bar. Input the command as follows:
 ``` cmd
-"assimp.exe" export interior.obj interior.dae --config=full
+assimp.exe export interior.obj interior.dae --config=full
 ```
 Remember to replace `interior.obj` with the file name of your model.
 
@@ -82,11 +82,32 @@ assimp export interior.obj interior.dae --config=full
 ```
 Remember to replace `interior.obj` with the file name of your model.
 
-Then, upload the .dae file and the texture images (*.jpeg) by "File" -> "Upload Local Files...", or simply drag-and-drop the files from file explorer to the Cloud9 workspace file panel.
+**Linux users:**
+
+Build the latest assimp since assimp 3.3.1 is buggy:
+
+```bash
+git clone https://github.com/assimp/assimp.git
+cd assimp
+mkdir build
+cd build
+cmake .. -DASSIMP_BUILD_IFC_IMPORTER=OFF # turn off the IFC format, which takes lots of resource to build
+make
+sudo make install
+```
+Convert the model file:
+```bash
+assimp export interior.obj interior.dae --config=full
+```
+Remember to replace `interior.obj` with the file name of your model.
+
+### 2.5 Import the interior model
+
+Upload the .dae file and the texture images (*.jpeg) by "File" -> "Upload Local Files...", or simply drag-and-drop the files from file explorer to the Cloud9 workspace file panel.
 
 Finally, replace the primitive shapes to our room model by using the [`<a-collada-model>`](https://aframe.io/docs/0.5.0/primitives/a-collada-model.html) entity. You probably want to set `scale="0.01 0.01 0.01"`.
 
-### 2.5 Publish the web page
+### 2.6 Publish the web page
 
 In the bottom "bash" termainal panel, input the commands as follows:
 ``` bash
