@@ -94,6 +94,7 @@ cd build
 cmake .. -DASSIMP_BUILD_IFC_IMPORTER=OFF # turn off the IFC format, which takes lots of resource to build
 make
 sudo make install
+sudo ldconfig # refresh the cache such that libassimp can be loaded
 ```
 Convert the model file:
 ```bash
