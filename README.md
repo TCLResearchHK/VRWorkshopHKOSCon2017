@@ -1,5 +1,7 @@
 # Getting into the virtual world with WebVR/A-Frame
 
+[![Join the chat at https://gitter.im/VRWorkshopHKOSCon2017/Lobby](https://badges.gitter.im/VRWorkshopHKOSCon2017/Lobby.svg)](https://gitter.im/VRWorkshopHKOSCon2017/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A VR workshop hosted at [HKOSCon 2017](https://hkoscon.org/2017/topics/getting-into-the-virtual-world-with-web-vr/).
 
 Let’s get started in Virtual Reality with A-Frame, which is an open source project that allows us to develop WebVR applications like how we develop web sites - using XML based declarative markup.
