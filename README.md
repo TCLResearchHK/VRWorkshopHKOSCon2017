@@ -20,7 +20,7 @@ Please follow the instruction listed below *before* the workshop, such that you 
 
  * Get a [Cloud9](https://c9.io/) account. It is an online development platform that includes an editor as well as other development tools (e.g. git). If you're familar with setting up a simple http dev server, feel free to skip this.
    
-   Note that creating a normal account requires a credit card (no charge, just for varification). We have paid for an [education plan](https://c9.io/pricing), such that via our invitation, you can create an account without providing credit card detail. To get an invitation, send a message to our [workshop chatroom](https://gitter.im/TCLResearchHK/VRWorkshop) providing your email address.
+   Note that creating a normal account requires a credit card (no charge, just for varification). We have paid for an [education plan](https://c9.io/pricing), such that via our invitation, you can create an account without providing credit card detail. To get an invitation, send a message to [Andy on Gitter](https://gitter.im/andyli) providing your email address.
 
 ## Procedure
 
