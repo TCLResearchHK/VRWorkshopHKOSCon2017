@@ -47,7 +47,7 @@ In the repository page, select the "settings" tab. Scroll down and find the "Git
 
 Open the workspace you have just created. In the top menu, select "File" -> "New From Template" -> "HTML file". Save it as "index.html" by selecting "File" -> "Save".
 
-Within `<head>...</head>`, add `<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>`.
+Within `<head>...</head>`, add `<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>`.
 
 Within `<body>...</body>`, add the code as follows:
 ```html

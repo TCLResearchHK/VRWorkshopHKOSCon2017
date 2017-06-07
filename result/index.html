@@ -2,12 +2,18 @@
 <html>
     <head>
         <title>VR Room</title>
-        <script src="//aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <!-- 
+            There is some problem with A-Frame 0.5.0 on Android...
+            https://github.com/aframevr/aframe/issues/2385
+        -->
+        <script src="//aframe.io/releases/0.4.0/aframe.min.js"></script>
+        <!--<script src="//aframe.io/releases/0.5.0/aframe.min.js"></script>-->
+        <!--<script src="//cdn.rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>-->
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
     </head>
     <body>
-        <a-scene antialias="true">
-            <a-entity position="9.435 0 0.579" rotation="-6.188 -240 0" camera="userHeight: 1.6" universal-controls kinematic-body="radius:0.2"></a-entity>
+        <a-scene>
+            <a-entity position="9.435 0 0.579" rotation="-6.188 -240 0" camera="userHeight: 1.6" universal-controls="movementAcceleration:20" kinematic-body="radius:0.25"></a-entity>
 
             <a-sky color="#CCCCFF"></a-sky>
 
