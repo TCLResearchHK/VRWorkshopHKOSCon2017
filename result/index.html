@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VR Room</title>
+        <script src="//aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
+    </head>
+    <body>
+        <a-scene antialias="true">
+            <a-entity position="9.435 0 0.579" rotation="-6.188 -240 0" camera="userHeight: 1.6" universal-controls kinematic-body="radius:0.2"></a-entity>
+
+            <a-sky color="#CCCCFF"></a-sky>
+
+            <a-collada-model src="model/all_0303_V1.dae" scale="0.01 0.01 0.01"></a-collada-model>
+            
+            <!-- floor -->
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#AAAAAA" visible="false" static-body></a-plane>
+            
+            <!-- walls -->
+            <a-plane position="3.996 1.250 4.002" rotation="0 0 0" width="6.230" height="2.500" visible="false" static-body></a-plane>
+            <a-plane position="2.850 1.250 1.028" rotation="0 0 0" width="3.790" height="2.500" visible="false" static-body></a-plane>
+            <a-plane position="5.978 1.250 -0.195" rotation="0 0 0" width="2.450" height="2.500" visible="false" static-body></a-plane>
+            <a-plane position="4.717 1.250 0.364" rotation="0 90 0" width="1.140" height="2.500" visible="false" static-body></a-plane>
+            <a-plane position="0.966 1.250 2.519" rotation="0 90 0" width="3.050" height="2.500" visible="false" static-body></a-plane>
+            <a-plane position="7.154 1.250 0.839" rotation="0 90 0" width="2.150" height="2.500" visible="false" static-body></a-plane>
+            <a-plane position="7.154 1.250 3.482" rotation="0 90 0" width="1.210" height="2.500" visible="false" static-body></a-plane>
+            
+            <!-- furnitures -->
+            <a-box position="5.954 0.354 0.780" depth="0.460" height="0.750" width="1.190" visible="false" static-body></a-box>
+            <a-box position="5.199 0.387 2.531" depth="0.650" height="0.900" width="1.800" visible="false" static-body></a-box>
+            <a-box position="5.199 0.387 3.667" depth="0.650" height="0.900" width="1.800" visible="false" static-body></a-box>
+            <a-box position="2.772 0.238 2.422" depth="0.400" height="0.610" width="1.120" visible="false" static-body></a-box>
+            <a-box position="2.616 0.238 1.327" depth="0.520" height="0.610" width="1.000" visible="false" static-body></a-box>
+        </a-scene>
+        </a-scene>
+    </body>
+</html>
