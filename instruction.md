@@ -47,7 +47,10 @@ In the repository page, select the "settings" tab. Scroll down and find the "Git
 
 Open the workspace you have just created. In the top menu, select "File" -> "New From Template" -> "HTML file". Save it as "index.html" by selecting "File" -> "Save".
 
-Within `<head>...</head>`, add `<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>`.
+Within `<head>...</head>`, add
+```html
+<script src="//cdn.rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
+```
 
 Within `<body>...</body>`, add the code as follows:
 ```html
@@ -118,3 +121,22 @@ git push
 ```
 
 The files in the Cloud9 workspace will be synchronized to your GitHub repository. You can now use the GitHub Pages link created in the earlier step to view the web page.
+
+### 2.7 Adding collision detection
+
+Right now we can walk right through the walls and furnitures. In order to prevent that, we need to simulate some physics. Let's use [aframe-extras](https://github.com/donmccurdy/aframe-extras/). Load it by adding it to `<head>`:
+```html
+<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
+```
+
+Customize the camera by adding a line as follows:
+```html
+<a-entity camera="userHeight: 1.6" universal-controls="movementAcceleration:20" kinematic-body="radius:0.25"></a-entity>
+```
+
+Add some `static-body` to define the places that users should not pass through:
+```html
+<a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" visible="false" static-body></a-plane>
+<a-box position="5.954 0.354 0.780" depth="0.460" height="0.750" width="1.190" visible="false" static-body></a-box>
+```
+Of course `position`, `rotation`, `width`, `height`, and `depth` should be adjusted properly.
